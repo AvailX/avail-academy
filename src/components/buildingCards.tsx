@@ -18,11 +18,11 @@ const CardComponent: React.FC<CardProps> = ({
   backgroundImage,
 }) => {
   return (
-    <Card
+    <Box
       sx={{
-        width: 250,
-        borderRadius: "16px",
-        // background: "linear-gradient(to bottom right, #FF6F61, #4B0082)",
+        width: 214,
+        height: "auto",
+        borderRadius: "26px",
         background: backgroundImage
           ? `url(${backgroundImage}) center/cover no-repeat`
           : "linear-gradient(to bottom right, #FF6F61, #4B0082)",
@@ -48,7 +48,8 @@ const CardComponent: React.FC<CardProps> = ({
         sx={{
           display: "flex",
           justifyContent: "flex-end",
-          marginTop: "16px",
+          marginTop: "10px",
+          marginBottom: "10px",
         }}
       >
         <img
@@ -57,13 +58,29 @@ const CardComponent: React.FC<CardProps> = ({
           style={{ height: "24px", width: "24px" }}
         />
       </Box>
-      <CardContent>
-        <Typography variant="h6" component="div" gutterBottom>
+      <Box
+        sx={{
+          display: "flex",
+          marginTop: "5px",
+        }}
+      >
+        {/* <Typography variant="h6" component="div" gutterBottom>
           {title}
+        </Typography> */}
+        <Typography
+          sx={{
+            fontFamily: "Inter, sans-serif", // Specify the font-family with a fallback
+            fontSize: "15px", // Set font size
+            fontWeight: 400, // Set font weight
+            lineHeight: "18.15px", // Set line height
+            textAlign: "left", // Set text alignment
+            color: "#FFFFFF", // Optional: set the text color if needed
+          }}
+        >
+          {description}
         </Typography>
-        <Typography variant="body2">{description}</Typography>
-      </CardContent>
-    </Card>
+      </Box>
+    </Box>
   );
 };
 

@@ -2,6 +2,10 @@ import CardComponent from "components/buildingCards";
 import { Box } from "@mui/material";
 import React from "react";
 import Example from "./components/carouselItems";
+import memeCoinImage from "./assets/meme-coin-gradient.jpg";
+import leanrleogradient from "./assets/learn-leo-gradient.jpg";
+import nftgradient from "./assets/nft-gradient2.png";
+import Header from "components/welcometab";
 
 interface CardData {
   title: string;
@@ -17,20 +21,20 @@ const App = () => {
       description:
         "Learn how to launch your own Meme coin on the Aleo Blockchain.",
       badgeText: "Meme Coin",
-      backgroundImage: "url('https://example.com/image.jpg')",
+      backgroundImage: memeCoinImage,
     },
     {
       title: "NFT's",
       description: "Learn how to launch your own NFT's on the Aleo Blockchain.",
       badgeText: "NFT's",
-      backgroundImage: "url('https://example.com/image.jpg')",
+      backgroundImage: nftgradient,
     },
     {
       title: "Learn Leo",
       description:
         "Learn how to launch your own Meme coin on the Aleo Blockchain.",
       badgeText: "Learn Leo",
-      backgroundImage: "url('https://example.com/image.jpg')",
+      backgroundImage: leanrleogradient,
     },
   ];
   return (
@@ -55,6 +59,7 @@ const App = () => {
         ))}
       </Box>
       <Example />
+      <Header />
     </Box>
   );
 };
