@@ -1,7 +1,6 @@
 // CardComponent.js
 import React from "react";
-import { Card, CardContent, Typography, Box, Badge } from "@mui/material";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { Typography, Box } from "@mui/material";
 import arrow from "../assets/arrow-right-circle.svg";
 
 interface CardProps {
@@ -64,17 +63,14 @@ const CardComponent: React.FC<CardProps> = ({
           marginTop: "5px",
         }}
       >
-        {/* <Typography variant="h6" component="div" gutterBottom>
-          {title}
-        </Typography> */}
         <Typography
           sx={{
-            fontFamily: "Inter, sans-serif", // Specify the font-family with a fallback
-            fontSize: "15px", // Set font size
-            fontWeight: 400, // Set font weight
-            lineHeight: "18.15px", // Set line height
-            textAlign: "left", // Set text alignment
-            color: "#FFFFFF", // Optional: set the text color if needed
+            fontFamily: "Inter, sans-serif",
+            fontSize: "15px",
+            fontWeight: 400,
+            lineHeight: "18.15px",
+            textAlign: "left",
+            color: "#FFFFFF",
           }}
         >
           {description}

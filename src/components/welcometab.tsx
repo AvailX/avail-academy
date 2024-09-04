@@ -10,10 +10,16 @@ import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SearchIcon from "@mui/icons-material/Search";
+import bell from "assets/bell.svg";
+import settingIcon from "assets/settings.svg";
 
 const Header = () => {
   // Use useState to manage the user's name
   const [userName, setUserName] = useState("Nick");
+
+  const handleIconClick = (iconName: string) => {
+    alert(`You clicked on the ${iconName} icon!`);
+  };
 
   return (
     <Box
@@ -37,6 +43,7 @@ const Header = () => {
 
       <Box sx={{ display: "flex", gap: 1 }}>
         <IconButton
+          onClick={() => handleIconClick("Language")}
           sx={{
             color: "#FFFFFF",
             backgroundColor: "#4C0423",
@@ -47,6 +54,7 @@ const Header = () => {
           <LanguageIcon />
         </IconButton>
         <IconButton
+          onClick={() => handleIconClick("Settings")}
           sx={{
             color: "#FFFFFF",
             backgroundColor: "#4C0423",
@@ -57,6 +65,7 @@ const Header = () => {
           <SettingsIcon />
         </IconButton>
         <IconButton
+          onClick={() => handleIconClick("Notifications")}
           sx={{
             color: "#FFFFFF",
             backgroundColor: "#4C0423",
@@ -64,7 +73,11 @@ const Header = () => {
             padding: "8px",
           }}
         >
-          <NotificationsIcon />
+          <img
+            src={bell}
+            alt="arrow"
+            style={{ height: "24px", width: "24px" }}
+          />
         </IconButton>
       </Box>
 
