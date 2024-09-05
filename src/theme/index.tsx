@@ -1,5 +1,9 @@
-import { createTheme } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 
-// ! Note: This would help to make a lot of things reusable when the design is ready will set it up better
-const theme = createTheme({});
+const theme = createTheme({
+  typography: {
+    fontFamily: "'Inter', sans-serif",
+  },
+});
+
 export default theme;
